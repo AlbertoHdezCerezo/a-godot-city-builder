@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bke5aos7scrrr"]
+[gd_scene load_steps=5 format=3 uid="uid://bke5aos7scrrr"]
 
 [ext_resource type="PackedScene" uid="uid://cqjeyuvhnsxcq" path="res://assets/models/banner.glb" id="1_dcksc"]
 [ext_resource type="PackedScene" uid="uid://dq1vvxw3jq3do" path="res://scenes/environment/environment.tscn" id="2_wncav"]
+[ext_resource type="PackedScene" uid="uid://cyb8pf1d38500" path="res://scenes/builder/builder.tscn" id="3_d52ai"]
+[ext_resource type="PackedScene" uid="uid://da8wohpqrl2pd" path="res://scenes/cursor/cursor.tscn" id="4_jcbnu"]
 
 [node name="Sandbox" type="Node3D"]
 
 [node name="banner" parent="." instance=ExtResource("1_dcksc")]
 transform = Transform3D(0.974764, 6.70104e-07, -0.223233, -4.47035e-08, 0.999999, -5.96046e-08, 0.223233, -2.99031e-07, 0.974765, 0.0181224, 1.30385e-08, -0.0524412)
+visible = false
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 size = Vector3(100, 0, 100)
@@ -19,3 +22,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 fov = 40.0
 
 [node name="Environment" parent="." instance=ExtResource("2_wncav")]
+
+[node name="Builder" parent="." node_paths=PackedStringArray("cursor", "camera") instance=ExtResource("3_d52ai")]
+cursor = NodePath("../Cursor")
+camera = NodePath("../View/Camera")
+
+[node name="Cursor" parent="." instance=ExtResource("4_jcbnu")]

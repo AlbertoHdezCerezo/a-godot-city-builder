@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyb8pf1d38500"]
+
+[ext_resource type="Script" path="res://scenes/builder/builder.gd" id="1_ipd0f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5njrq"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_x2j0n"]
+material = SubResource("StandardMaterial3D_5njrq")
+radius = 0.1
+height = 0.2
+
+[node name="Builder" type="Node3D"]
+script = ExtResource("1_ipd0f")
+
+[node name="GroundTileSelector" type="Node3D" parent="."]
+
+[node name="Pointer" type="MeshInstance3D" parent="GroundTileSelector"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27, 0)
+cast_shadow = 0
+mesh = SubResource("SphereMesh_x2j0n")
