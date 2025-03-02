@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq1vvxw3jq3do"]
+
+[ext_resource type="Environment" uid="uid://dkgpva6hcr8fl" path="res://assets/resources/environments/default_world_environment.tres" id="1_0hk4p"]
+
+[node name="Environment" type="Node3D"]
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.642788, -0.586824, 0.492404, 0, 0.642788, 0.766044, -0.766044, 0.492404, -0.413176, 0, 0.0468903, 0)
+shadow_enabled = true
+shadow_blur = 0.5
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_0hk4p")
