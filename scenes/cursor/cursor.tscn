@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://da8wohpqrl2pd"]
+
+[ext_resource type="Script" path="res://scenes/cursor/cursor.gd" id="1_nv0dg"]
+
+[node name="Cursor" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nv0dg")
