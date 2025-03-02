@@ -1,0 +1,4 @@
+.godot/**/*
+*.cfg
+*.cache
+*.bin
