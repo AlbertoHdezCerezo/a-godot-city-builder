@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bke5aos7scrrr"]
 
 [ext_resource type="PackedScene" uid="uid://cqjeyuvhnsxcq" path="res://assets/models/banner.glb" id="1_dcksc"]
-[ext_resource type="Environment" uid="uid://dkgpva6hcr8fl" path="res://assets/resources/environments/default_world_environment.tres" id="2_q2rat"]
+[ext_resource type="PackedScene" uid="uid://dq1vvxw3jq3do" path="res://scenes/environment/environment.tscn" id="2_wncav"]
 
 [node name="Sandbox" type="Node3D"]
 
@@ -16,12 +16,6 @@ transform = Transform3D(0.866025, -0.286788, 0.409576, 0, 0.819152, 0.573576, -0
 
 [node name="Camera" type="Camera3D" parent="View"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
-environment = ExtResource("2_q2rat")
 fov = 40.0
 
-[node name="Environment" type="Node3D" parent="."]
-
-[node name="Sun" type="DirectionalLight3D" parent="Environment"]
-transform = Transform3D(-0.642788, -0.586824, 0.492404, 0, 0.642788, 0.766044, -0.766044, 0.492404, -0.413176, 0, 0.0468903, 0)
-shadow_enabled = true
-shadow_blur = 0.5
+[node name="Environment" parent="." instance=ExtResource("2_wncav")]
