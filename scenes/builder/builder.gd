@@ -44,9 +44,11 @@ func _process(delta) -> void:
 
 func _move_selector_to_cursor_position() -> void:
 	if _can_move_selector():
-		var new_position := cursor_to_world_raycaster.screen_cursor_position_in_world()
-		selector.position.x = new_position.x
-		selector.position.z = new_position.z
+		var new_position = cursor_to_world_raycaster.screen_cursor_position_in_world()
+
+		if new_position != null:
+			selector.position.x = new_position.x
+			selector.position.z = new_position.z
 
 func _can_move_selector() -> bool:
 	return cursor_to_world_raycaster != null and selector != null
