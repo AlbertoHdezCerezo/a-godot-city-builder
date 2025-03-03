@@ -23,8 +23,9 @@ fov = 40.0
 
 [node name="Environment" parent="." instance=ExtResource("2_wncav")]
 
-[node name="Builder" parent="." node_paths=PackedStringArray("cursor", "camera") instance=ExtResource("3_d52ai")]
+[node name="Builder" parent="." node_paths=PackedStringArray("cursor", "camera", "selector") instance=ExtResource("3_d52ai")]
 cursor = NodePath("../Cursor")
 camera = NodePath("../View/Camera")
+selector = NodePath("GroundTileSelector")
 
 [node name="Cursor" parent="." instance=ExtResource("4_jcbnu")]

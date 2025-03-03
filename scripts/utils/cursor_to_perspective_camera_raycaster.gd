@@ -21,7 +21,7 @@ func _init(new_view_camera: Camera3D, new_world_plane: Plane, new_game_cursor: C
 	world_plane = new_world_plane
 	game_cursor = new_game_cursor
 
-func screen_cursor_position_in_world() -> Vector3:
+func screen_cursor_position_in_world() -> Variant:
 	return world_plane.intersects_ray(
 		view_camera.project_ray_origin(game_cursor.screen_position()),
 		view_camera.project_ray_normal(game_cursor.screen_position())
