@@ -1,5 +1,3 @@
-@tool
-
 extends Node3D
 
 class_name Builder
@@ -28,7 +26,7 @@ func _initialize_cursor_to_world_raycaster() -> void:
 		cursor_to_world_raycaster = null
 
 # Tile map where buildings will be places
-@export var gridmap: GridMap
+@export var builder_gridmap: BuilderGridmap
 
 # In-Game 3D cursor to preview buildinds to be placed in city
 @export var selector: Node3D
@@ -43,12 +41,8 @@ func _process(delta) -> void:
 	_move_selector_to_cursor_position()
 
 func _move_selector_to_cursor_position() -> void:
-	if _can_move_selector():
-		var new_position = cursor_to_world_raycaster.screen_cursor_position_in_world()
+	var cursor_position_in_world = cursor_to_world_raycaster.screen_cursor_position_in_world()
 
-		if new_position != null:
-			selector.position.x = new_position.x
-			selector.position.z = new_position.z
+	if cursor_position_in_world == null: return
 
-func _can_move_selector() -> bool:
-	return cursor_to_world_raycaster != null and selector != null
+	selector.position = builder_gridmap.world_position_to_tile_center(cursor_position_in_world) * Vector3(1, 0, 1)
