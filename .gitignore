@@ -1,4 +1,6 @@
-.godot/
+.godot/**/*
 *.cfg
 *.cache
+*.bin
+*.cfg
 *.bin
