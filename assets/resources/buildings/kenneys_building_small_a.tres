@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Building" load_steps=3 format=3 uid="uid://b6s3sjrdwmkai"]
+
+[ext_resource type="Script" uid="uid://wqbixy22c7sw" path="res://resources/building.gd" id="1_jkcy0"]
+[ext_resource type="PackedScene" uid="uid://dl6l7mke1pq3b" path="res://assets/models/kenneys_building_small_a.glb" id="1_krypu"]
+
+[resource]
+script = ExtResource("1_jkcy0")
+model = ExtResource("1_krypu")
+name = "Small Building"
+price = 100
+metadata/_custom_type_script = "uid://wqbixy22c7sw"

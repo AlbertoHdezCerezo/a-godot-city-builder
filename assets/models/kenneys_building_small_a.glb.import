@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dl6l7mke1pq3b"
-path="res://.godot/imported/kenneys-building-small-a.glb-9f5d8449f6cf0430333b1083292b38d3.scn"
+path="res://.godot/imported/kenneys_building_small_a.glb-0eb80f82136603a0011ea3ab2a6c94f7.scn"
 
 [deps]
 
-source_file="res://assets/models/kenneys-building-small-a.glb"
-dest_files=["res://.godot/imported/kenneys-building-small-a.glb-9f5d8449f6cf0430333b1083292b38d3.scn"]
+source_file="res://assets/models/kenneys_building_small_a.glb"
+dest_files=["res://.godot/imported/kenneys_building_small_a.glb-0eb80f82136603a0011ea3ab2a6c94f7.scn"]
 
 [params]
 
