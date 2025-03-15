@@ -1,22 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bke5aos7scrrr"]
+[gd_scene load_steps=5 format=3 uid="uid://bke5aos7scrrr"]
 
-[ext_resource type="PackedScene" uid="uid://cqjeyuvhnsxcq" path="res://assets/models/banner.glb" id="1_dcksc"]
 [ext_resource type="PackedScene" uid="uid://dq1vvxw3jq3do" path="res://scenes/environment/environment.tscn" id="2_wncav"]
 [ext_resource type="PackedScene" uid="uid://cyb8pf1d38500" path="res://scenes/builder/builder.tscn" id="3_d52ai"]
 [ext_resource type="PackedScene" uid="uid://da8wohpqrl2pd" path="res://scenes/cursor/cursor.tscn" id="4_jcbnu"]
 [ext_resource type="PackedScene" uid="uid://bkhftpvcbxjgx" path="res://scenes/builder_gridmap/builder_gridmap.tscn" id="5_psxm7"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fvapr"]
-albedo_color = Color(0.18833, 0.47658, 0.517076, 1)
-
 [node name="Sandbox" type="Node3D"]
-
-[node name="banner" parent="." instance=ExtResource("1_dcksc")]
-transform = Transform3D(0.974764, 6.70104e-07, -0.223233, -4.47035e-08, 0.999999, -5.96046e-08, 0.223233, -2.99031e-07, 0.974765, 0.0181224, 1.30385e-08, -0.0524412)
-visible = false
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-size = Vector3(100, 0, 100)
 
 [node name="View" type="Node3D" parent="."]
 transform = Transform3D(0.707106, -0.40558, 0.579228, 0, 0.819152, 0.573576, -0.707106, -0.40558, 0.579228, 0, 0, 0)
@@ -33,11 +22,6 @@ camera = NodePath("../View/Camera")
 builder_gridmap = NodePath("../BuilderGridmap")
 
 [node name="Cursor" parent="." instance=ExtResource("4_jcbnu")]
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.01, 0.5)
-size = Vector3(1, 0, 1)
-material = SubResource("StandardMaterial3D_fvapr")
 
 [node name="BuilderGridmap" parent="." instance=ExtResource("5_psxm7")]
 cell_size = Vector3(1, 1, 1)

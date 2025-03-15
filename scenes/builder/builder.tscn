@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cyb8pf1d38500"]
 
-[ext_resource type="Script" path="res://scenes/builder/builder.gd" id="1_ipd0f"]
+[ext_resource type="Script" uid="uid://6gqmvqddvdri" path="res://scenes/builder/builder.gd" id="1_ipd0f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3vicn"]
 shading_mode = 0
