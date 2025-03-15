@@ -2,7 +2,5 @@
 
 [ext_resource type="Script" uid="uid://cd24slx2w11eg" path="res://scenes/cursor/cursor.gd" id="1_nv0dg"]
 
-[node name="Cursor" type="Control"]
-layout_mode = 3
-anchors_preset = 0
+[node name="Cursor" type="Node3D"]
 script = ExtResource("1_nv0dg")

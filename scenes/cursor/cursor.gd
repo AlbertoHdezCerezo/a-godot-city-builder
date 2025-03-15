@@ -1,4 +1,4 @@
-extends Control
+extends Node3D
 
 # Represents the game cursor
 class_name Cursor

@@ -14,9 +14,11 @@ class_name Builder
 		camera = new_camera
 		_initialize_cursor_to_world_raycaster()
 
-var plane := Plane(Vector3.UP, Vector3.ZERO)
-
+# Transforms player cursor 2D coordinates from
+# screen into 3D coordinates of the game world
 var cursor_to_world_raycaster : CursorToPerspectiveCameraRaycaster
+
+var plane := Plane(Vector3.UP, Vector3.ZERO)
 
 func _initialize_cursor_to_world_raycaster() -> void:
 	if cursor != null and camera != null:
@@ -25,17 +27,16 @@ func _initialize_cursor_to_world_raycaster() -> void:
 	else:
 		cursor_to_world_raycaster = null
 
+@export var selector: Node3D :
+	set (new_selector):
+		selector = new_selector
+
 # Tile map where buildings will be places
 @export var builder_gridmap: BuilderGridmap
 
-# In-Game 3D cursor to preview buildinds to be placed in city
-@export var selector: Node3D
-
+# TODO: remove this now we have the new selector class
 func _ready() -> void:
-	if selector == null : _set_default_selector()
-
-func _set_default_selector() -> void:
-	selector = $GroundTileSelector
+	if selector == null : selector = $Selector
 
 func _process(delta) -> void:
 	_move_selector_to_cursor_position()
